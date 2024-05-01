@@ -8,7 +8,7 @@ import numpy as np
 import csv as cv
 
 
-st.title("Formulário de Inscrição de alunos")
+st.title("Formulário de Inscrição de Gestão de Pacientes")
 dados_de_alunos=[]
 novo_aluno=[]
 Nomes=[]
@@ -26,10 +26,10 @@ def PesquisaB(numero):
 
 
 
-Pesquisa = st.sidebar.text_input("Pesquisa por numero de Aluno")
+Pesquisa = st.sidebar.text_input("Pesquisa por numero de Processo")
 button = st.sidebar.button("Pesquise Por Nome de Aluno", on_click=PesquisaB, args=(numero))
 
-menu = ["Menu", "Pesquisa" ,"Academia", "Image",]
+menu = ["Menu", "Pesquisa" ,"Academia", "IMAGE - Classifier APP",]
 choice = st.selectbox("Selecione uma Opção", menu)
 
 def menu():
@@ -119,9 +119,9 @@ def menu():
         else:
             st.write(" Aprovado ", soma )
 
-    if choice == "Image":
+    if choice == "IMAGE - Classifier APP":
 
-        elif choice == 'IMAGE - Classifier APP':
+        #elif choice == 'IMAGE - Classifier APP':
          
         model = ResNet50V2(weights='imagenet')
 
