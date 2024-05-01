@@ -1,5 +1,4 @@
 import random
-from datasets import (filter_data, filter_dataframe)
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet_v2 import ResNet50V2, preprocess_input, decode_predictions
 import streamlit as st
