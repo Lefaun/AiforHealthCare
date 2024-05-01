@@ -8,8 +8,8 @@ import csv as cv
 
 
 st.title("Formulário de Inscrição de Gestão de Pacientes")
-dados_de_alunos=[]
-novo_aluno=[]
+dados_de_Pacientes=[]
+novo_Paciente=[]
 Nomes=[]
 Moradas=[]
 Numeros=[]
@@ -26,7 +26,7 @@ def PesquisaB(numero):
 
 
 Pesquisa = st.sidebar.text_input("Pesquisa por numero de Processo")
-button = st.sidebar.button("Pesquise Por Nome de Aluno", on_click=PesquisaB, args=(numero))
+button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(numero))
 
 menu = ["Menu", "Pesquisa" ,"Academia", "IMAGE - Classifier APP",]
 choice = st.selectbox("Selecione uma Opção", menu)
@@ -40,7 +40,7 @@ def menu():
 
         col1, col2 = st.columns(2)
         with col1:
-            st.header("Número de Aluno")
+            st.header("Número de Paciente")
         with col2:
             st.header(numero)
         Nome = st.text_input("Nome Completo")
@@ -58,40 +58,40 @@ def menu():
             turma = st.multiselect(label=("Selecione uma Disciplina"),options=["Ciências da Vida","Código Digital","Ciências Fisico Quimicas"])
         with col2:
             Idade = st.text_input("Idade")
-        numeroaluno = st.header(numero)
-        Numeros.append(numeroaluno)
-        Button = st.button("Adicionar aluno", key='add')
+        numeroPaciente = st.header(numero)
+        Numeros.append(numeroPaciente)
+        Button = st.button("Adicionar Paciente", key='add')
         if Button == True:
-            novo_aluno = ({"Número": [Numeros], "Nome": [Nome], "Morada": [Morada], "Contacto": [Contacto]})
-            dados_de_alunos.append(novo_aluno)
+            novo_Paciente = ({"Número": [Numeros], "Nome": [Nome], "Morada": [Morada], "Contacto": [Contacto]})
+            dados_de_Pacientes.append(novo_Paciente)
 
-            df = pd.DataFrame(dados_de_alunos, columns=["Numero", "Nome", "Morada"])
+            df = pd.DataFrame(dados_de_Pacientes, columns=["Numero", "Nome", "Morada"])
 
-            df.to_csv("Lista_de_Alunos2.csv", sep=",")
-            st.success("Aluno Adicionado com Sucesso")
+            df.to_csv("Lista_de_Pacientes2.csv", sep=",")
+            st.success("Paciente Adicionado com Sucesso")
 
         else:
-            data = [{'Numero': [numero], 'Aluno': [Nomes], 'Morada': [Morada],}]
-            df2 = pd.DataFrame(data={'Numero': [numero], 'Aluno': [Nomes], 'Morada': [Morada],})
+            data = [{'Numero': [numero], 'Paciente': [Nomes], 'Morada': [Morada],}]
+            df2 = pd.DataFrame(data={'Numero': [numero], 'Paciente': [Nomes], 'Morada': [Morada],})
             # Alteração de Teste na Criação do CSV
 
             df.append(df2)
-            df.to_csv("Lista_de_Alunos2.csv", sep=";")
+            df.to_csv("Lista_de_Pacientes2.csv", sep=";")
             st.dataframe(df, width=700)
 
-        articles = pd.read_csv('Lista_de_Alunos.csv' ,sep=",")
+        articles = pd.read_csv('Lista_de_Pacientes.csv' ,sep=",")
         st.dataframe(articles, width=700)
 
     if choice == "Pesquisa":
-        Pesquisa = st.text_input("Pesquisa por numero de Aluno", key="submit")
-        clicked = st.button("Pesquise Por Nome de Aluno", args=(numero), key="Submit2")
-        df = pd.read_csv('Lista_de_Alunos.csv', sep=",")
+        Pesquisa = st.text_input("Pesquisa por numero de Paciente", key="submit")
+        clicked = st.button("Pesquise Por Nome de Paciente", args=(numero), key="Submit2")
+        df = pd.read_csv('Lista_de_Pacientes.csv', sep=",")
         #st.dataframe(articles, width=700)
         if clicked == True:
             for Pesquisa in Numeros:
                     st.title("Resultado da Pesquisa")
                     st.title(Nomes, Numero, Morada)
-            df = pd.read_csv('Lista_de_Alunos.csv', sep=",")
+            df = pd.read_csv('Lista_de_Pacientes.csv', sep=",")
             st.dataframe(df, width=700)
 
 
@@ -178,7 +178,7 @@ def menu():
             # st.write('%s (%.2f%%)' % (label, prob * 100))
             # label,_,prob = decoded_preds[1]
             # st.write(f'{label}:{prob:2%}')
-        st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/button2.png")
+        st.image("/Users/paulomonteiro/PycharmProjects/Formulário_Pacientes/button2.png")
         st.markdown('<a name="menu"></a>', unsafe_allow_html=True)
         col1, col2 = st.columns(2)
         with col1:
@@ -187,7 +187,7 @@ def menu():
             uploaded_file = st.file_uploader("Escolha uma imagem...", type=["jpg", "jpeg", "png", "csv", "GIF", "gif"])
 
         with col2:
-            st.header('Fotografia do Aluno')
+            st.header('Fotografia do Paciente')
             st.image(uploaded_file)
 
         if uploaded_file is True:
@@ -206,7 +206,7 @@ def menu():
 
         if st.button("Adicionar ao carrinho"):
             st.markdown("[ir para secção](#menu)")
-        html = f"<a href='{menu}'><img src='data:/Users/paulomonteiro/PycharmProjects/Formulário_Alunos/button2.png/png;base64,{choice == Menu}'></a>"
+        html = f"<a href='{menu}'><img src='data:/Users/paulomonteiro/PycharmProjects/Formulário_Pacientes/button2.png/png;base64,{choice == Menu}'></a>"
         st.markdown(html, unsafe_allow_html=True)
 
 menu()
