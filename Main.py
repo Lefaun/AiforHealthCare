@@ -100,11 +100,11 @@ def menu():
         soma = 0
         Lista = [11, 16, 19, 18]
         num = 0
-        st.header("Percurso Académico")
-        Disciplina1 = st.multiselect(label=("Selecione uma Disciplina"),options=["Matemática", "Turma de Engenharia","Ciências da Vida","Código Digital","Ciências Fisico Quimicas"])
-        st.write(Disciplina1)
+        st.header("Análises Clinicas")
+        Disciplina1 = st.multiselect(label=("Selecione uma Disciplina"),options=["Ferrantina", "Hemoglobina","Leucócitos","Creatinina","Proteina C-reativa"])
+        st.write("Valores de referência")
 
-        Notas = st.number_input("Introduza a Avaliação", min_value=5)
+        Notas = st.number_input("Introduza o valor registado", min_value=5)
 
         for notas in Lista:
             soma += notas/ len(Lista)
