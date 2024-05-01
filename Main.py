@@ -55,7 +55,7 @@ def menu():
         Contactos.append(Contacto)
         col1, col2 = st.columns(2)
         with col1:
-            turma = st.multiselect(label=("Selecione uma Disciplina"),options=["Ciências da Vida","Código Digital","Ciências Fisico Quimicas"])
+            turma = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Ciências da Vida","Código Digital","Ciências Fisico Quimicas"])
         with col2:
             Idade = st.text_input("Idade")
         numeroPaciente = st.header(numero)
