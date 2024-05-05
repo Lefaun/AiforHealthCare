@@ -126,6 +126,7 @@ def menu():
 
         # título da página
         st.title('Detecção e classificação de imagens médicas')
+        st. write("<a href='https://diagnose-images.streamlit.app/' id='my-link'>Detecção e classificação de imagens diagnóstico</a>", unsafe_allow_html=True)
 
         # layout da página
         col1, col2 = st.columns(2)
