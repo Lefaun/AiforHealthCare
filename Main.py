@@ -55,7 +55,7 @@ def menu():
         Contactos.append(Contacto)
         col1, col2 = st.columns(2)
         with col1:
-            turma = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Hemograma","Radiologia","Anatomia Patológica"])
+            Especialidade = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Hemograma","Radiologia","Anatomia Patológica"])
         with col2:
             Idade = st.text_input("Idade")
         numeroPaciente = st.header(numero)
@@ -69,6 +69,7 @@ def menu():
 
             df.to_csv("Lista_de_Pacientes2.csv", sep=",")
             st.success("Paciente Adicionado com Sucesso")
+            st.dataframe(dados_de_Pacientes, width=700)
 
         else:
             data = [{'Numero': [numero], 'Paciente': [Nomes], 'Morada': [Morada],}]
@@ -79,8 +80,8 @@ def menu():
             df2.to_csv("Lista_de_Pacientes2.csv", sep=";")
             st.dataframe(df2, width=700)
 
-        #articles = pd.read_csv('Lista_de_Pacientes.csv' ,sep=",")
-        st.dataframe(df, width=700)
+        articles = pd.read_csv('Lista_de_Pacientes.csv' ,sep=",")
+        st.dataframe(articles, width=700)
 
     if choice == "Pesquisa":
         Pesquisa = st.text_input("Pesquisa por numero de Paciente", key="submit")
