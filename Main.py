@@ -99,7 +99,7 @@ def menu():
             st.title("Resultado da Pesquisa")
     #########################################
             #st.title(Nomes, numeroPaciente, Morada)
-            df = pd.read_csv('Lista_de_Paciente2s.csv', sep=",")
+            df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
             ###################################
             st.write(df)
             st.dataframe(df, width=700)
