@@ -29,7 +29,7 @@ def PesquisaB(numero):
 Pesquisa = st.sidebar.text_input("Pesquisa por numero de Processo")
 button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(numeroPaciente))
 
-menu = ["Menu", "Pesquisa" ,"Academia", "IMAGE - Classifier APP",]
+menu = ["Menu", "Pesquisa" ,"Análises Clínicas", "IMAGE - Classifier APP",]
 choice = st.selectbox("Selecione uma Opção", menu)
 
 def menu():
@@ -101,10 +101,8 @@ def menu():
             #st.title(Nomes, numeroPaciente, Morada)
             df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
             ###################################
-            filtro2 = df[df['Numeros']]
+            #filtro2 = df[df['Numeros']]
             st.write("DataFrame com filto por numero de paciente: ")
-            st.write(filtro2)
-            st.write(filtro2)
             st.dataframe(df, width=700)
            
                     
