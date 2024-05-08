@@ -79,8 +79,8 @@ def menu():
             df2.to_csv("Lista_de_Pacientes2.csv", sep=";")
             st.dataframe(df2, width=700)
 
-        articles = pd.read_csv('Lista_de_Pacientes.csv' ,sep=",")
-        st.dataframe(articles, width=700)
+        #articles = pd.read_csv('Lista_de_Pacientes.csv' ,sep=",")
+        st.dataframe(df, width=700)
 
     if choice == "Pesquisa":
         Pesquisa = st.text_input("Pesquisa por numero de Paciente", key="submit")
