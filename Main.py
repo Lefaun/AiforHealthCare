@@ -86,7 +86,7 @@ def menu():
     if choice == "Pesquisa":
         Pesquisa = st.text_input("Pesquisa por numero de Paciente", key="submit")
         clicked = st.button("Pesquise Por Nome de Paciente", args=(numero), key="Submit2")
-        df = pd.read_csv('Lista_de_Pacientes.csv', sep=",")
+        df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
         #st.dataframe(articles, width=700)
         if clicked == True:
             ###################################
@@ -95,7 +95,7 @@ def menu():
                     st.title("Resultado da Pesquisa")
             #########################################
                     st.title(Nomes, Numero, Morada)
-                    df = pd.read_csv('Lista_de_Pacientes.csv', sep=",")
+                    df = pd.read_csv('Lista_de_Paciente2s.csv', sep=",")
                     ###################################
                     st.write(df)
                     st.dataframe(df, width=700)
