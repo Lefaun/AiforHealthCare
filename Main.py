@@ -94,23 +94,23 @@ def menu():
         #st.dataframe(articles, width=700)
         if clicked == True:
             ###################################
-            for Pesquisa in Numeros:
-                if numeroPaciente or Nome in df:
-                    st.title("Resultado da Pesquisa")
-            #########################################
-                    st.title(Nomes, numeroPaciente, Morada)
-                    df = pd.read_csv('Lista_de_Paciente2s.csv', sep=",")
-                    ###################################
-                    st.write(df)
-                    st.dataframe(df, width=700)
-                    filtro2 = df[df['numeroPaciente'].str.contains(int(input('Escreva o numero de Paciente')))]
-                    st.write("DataFrame com filto por numero de paciente: ")
-                    st.write(filtro2)
+            #for Pesquisa in Numeros:
+                #if numeroPaciente or Nome in df:
+            st.title("Resultado da Pesquisa")
+    #########################################
+            st.title(Nomes, numeroPaciente, Morada)
+            df = pd.read_csv('Lista_de_Paciente2s.csv', sep=",")
+            ###################################
+            st.write(df)
+            st.dataframe(df, width=700)
+            filtro2 = df[df['numeroPaciente'].str.contains(int(input('Escreva o numero de Paciente')))]
+            st.write("DataFrame com filto por numero de paciente: ")
+            st.write(filtro2)
                     
 
 
 
-    if choice == "Academia":
+    if choice == "Análise Clínicas":
         soma = 0
         Lista = [11, 16, 19, 18]
         num = 0
