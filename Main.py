@@ -19,7 +19,7 @@ def PesquisaB(numero):
 
     if numero in Pesquisa:
         st.title("Resultado da Pesquisa")
-        st.title('Numero:',Numero)
+        st.title('Numero:',numeroPaciente)
         st.title('Nome',Nome)
 
 
@@ -58,7 +58,7 @@ def menu():
             Especialidade = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Hemograma","Radiologia","Anatomia Patológica"])
         with col2:
             Idade = st.text_input("Idade")
-        numeroPaciente = st.header(numero)
+        numeroPaciente = st.header(numeroPaciente)
         ###################################
         Numeros.append(numeroPaciente)
         Button = st.button("Adicionar Paciente", key='add')
@@ -86,16 +86,16 @@ def menu():
 
     if choice == "Pesquisa":
         Pesquisa = st.text_input("Pesquisa por numero de Paciente", key="submit")
-        clicked = st.button("Pesquise Por Nome de Paciente", args=(numero), key="Submit2")
+        clicked = st.button("Pesquise Por Nome de Paciente", args=(numeroPaciente), key="Submit2")
         df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
         #st.dataframe(articles, width=700)
         if clicked == True:
             ###################################
             for Pesquisa in Numeros:
-                if Numeros or Nome in df:
+                if numeroPaciente or Nome in df:
                     st.title("Resultado da Pesquisa")
             #########################################
-                    st.title(Nomes, Numero, Morada)
+                    st.title(Nomes, numeroPaciente, Morada)
                     df = pd.read_csv('Lista_de_Paciente2s.csv', sep=",")
                     ###################################
                     st.write(df)
