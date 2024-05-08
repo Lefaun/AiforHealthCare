@@ -66,7 +66,7 @@ def menu():
         Button = st.button("Adicionar Paciente", key='add')
         if Button == True:
             Numeros.append(numeroPaciente)
-            novo_Paciente = ({"Número": [Numeros], "Nome": [Nome], "Morada": [Morada], "Contacto": [Contacto]})
+            novo_Paciente = ({"Número": Numeros, "Nome": [Nome], "Morada": [Morada], "Contacto": [Contacto]})
             dados_de_Pacientes.append(novo_Paciente)
             df = pd.DataFrame(dados_de_Pacientes)
             #df = pd.DataFrame(dados_de_Pacientes, columns=["Número", "Nome", "Morada"])
