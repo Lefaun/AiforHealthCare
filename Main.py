@@ -16,18 +16,29 @@ Numeros=[]
 Contactos=[]
 #numeroPaciente = 1
 numeroPaciente= random.randint(1, 1000)
-def PesquisaB(numero):
+def PesquisaB(df):
 
-    if numero in Pesquisa:
-        st.title("Resultado da Pesquisa")
-        st.title('Numero:',numeroPaciente)
-        st.title('Nome',Nome)
+    st.title("Resultado da Pesquisa")
+    #########################################
+    #st.title(Nomes, numeroPaciente, Morada)
+    df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
+    ###################################
+    #filtro2 = df[df['Numeros']]
+    st.write("DataFrame com filto por numero de paciente: ")
+    filter2 = df[df["Número"] == Pesquisa]
+    st.table(filter2)
+    st.dataframe(df, width=700)
+           
+    #if numero in Pesquisa:
+        #st.title("Resultado da Pesquisa")
+        #st.title('Numero:',numeroPaciente)
+        #st.title('Nome',Nome)
 
 
 
 
 Pesquisa = st.sidebar.text_input("Pesquisa por numero de Processo")
-button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(numeroPaciente))
+button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(df))
 
 menu = ["Menu", "Pesquisa" ,"Análises Clínicas", "IMAGE - Classifier APP",]
 choice = st.selectbox("Selecione uma Opção", menu)
