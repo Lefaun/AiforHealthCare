@@ -60,9 +60,9 @@ def menu():
             Especialidade = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Hemograma","Radiologia","Anatomia Patológica"])
         with col2:
             Idade = st.text_input("Idade")
-        numeroPaciente = st.header(numeroPaciente)
+        #numeroPaciente = st.header(numeroPaciente)
         ###################################
-        x
+        
         Button = st.button("Adicionar Paciente", key='add')
         if Button == True:
             Numeros.append(numeroPaciente)
