@@ -42,7 +42,7 @@ def menu():
         with col1:
             st.header("Número de Paciente")
         with col2:
-            st.header(numero)
+            st.header(numeroPaciente)
         Nome = st.text_input("Nome Completo")
         Nomes.append(Nome)
         st.write(Nome)
