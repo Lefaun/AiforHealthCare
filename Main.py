@@ -55,7 +55,7 @@ def menu():
         Contactos.append(Contacto)
         col1, col2 = st.columns(2)
         with col1:
-            turma = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Ciências da Vida","Código Digital","Ciências Fisico Quimicas"])
+            turma = st.multiselect(label=("Selecione uma Especialidade Médica"),options=["Hemograma","Radiologia","Anatomia Patológica"])
         with col2:
             Idade = st.text_input("Idade")
         numeroPaciente = st.header(numero)
@@ -88,10 +88,14 @@ def menu():
         df = pd.read_csv('Lista_de_Pacientes.csv', sep=",")
         #st.dataframe(articles, width=700)
         if clicked == True:
+            ###################################
             for Pesquisa in Numeros:
+                if Pesquisa in df:
                     st.title("Resultado da Pesquisa")
                     st.title(Nomes, Numero, Morada)
             df = pd.read_csv('Lista_de_Pacientes.csv', sep=",")
+            ###################################
+            st.write(df)
             st.dataframe(df, width=700)
 
 
@@ -106,17 +110,17 @@ def menu():
 
         Notas = st.number_input("Introduza o valor registado", min_value=5)
 
-        for notas in Lista:
-            soma += notas/ len(Lista)
+        for valores in Lista:
+            soma += valores/ len(Lista)
 
-        for notas in Lista:
+        for valores in Lista:
 
-            st.write(" Aprovado ", notas)
+            st.write(" Dentro dos Valores de Referência ", valores)
 
         if soma >= 15:
-            st.write(" Aprovado com aproveitamento nota:", soma)
+            st.write("Dentro dos Valores", soma)
         else:
-            st.write(" Aprovado ", soma )
+            st.write(" Dentro dos Valores ", soma )
 
     if choice == "IMAGE - Classifier APP":
 
