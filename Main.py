@@ -14,8 +14,8 @@ Nomes=[]
 Moradas=[]
 Numeros=[]
 Contactos=[]
-numeroPaciente = 1
-#numeroPaciente= random.randint(1, 1000)
+#numeroPaciente = 1
+numeroPaciente= random.randint(1, 1000)
 def PesquisaB(numero):
 
     if numero in Pesquisa:
@@ -43,7 +43,7 @@ def menu():
         with col1:
             st.header("Número de Paciente")
         with col2:
-            numeroPaciente = int(1) 
+            #numeroPaciente = int(1) 
             st.header(numeroPaciente)
         Nome = st.text_input("Nome Completo")
         Nomes.append(Nome)
