@@ -98,7 +98,7 @@ def menu():
                 #if numeroPaciente or Nome in df:
             st.title("Resultado da Pesquisa")
     #########################################
-            st.title(Nomes, numeroPaciente, Morada)
+            #st.title(Nomes, numeroPaciente, Morada)
             df = pd.read_csv('Lista_de_Paciente2s.csv', sep=",")
             ###################################
             st.write(df)
