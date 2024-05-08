@@ -16,7 +16,7 @@ Numeros=[]
 Contactos=[]
 #numeroPaciente = 1
 numeroPaciente= random.randint(1, 1000)
-def PesquisaB(df):
+def PesquisaB():
 
     st.title("Resultado da Pesquisa")
     #########################################
@@ -38,7 +38,7 @@ def PesquisaB(df):
 
 
 Pesquisa = st.sidebar.text_input("Pesquisa por numero de Processo")
-button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(df))
+button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB)
 
 menu = ["Menu", "Pesquisa" ,"Análises Clínicas", "IMAGE - Classifier APP",]
 choice = st.selectbox("Selecione uma Opção", menu)
