@@ -101,11 +101,12 @@ def menu():
             #st.title(Nomes, numeroPaciente, Morada)
             df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
             ###################################
-            st.write(df)
-            st.dataframe(df, width=700)
-            filtro2 = df[df['numeroPaciente'].str.contains(int(input('Escreva o numero de Paciente')))]
+            filtro2 = df[df['numeroPaciente']]
             st.write("DataFrame com filto por numero de paciente: ")
             st.write(filtro2)
+            st.write(filtro2)
+            st.dataframe(df, width=700)
+           
                     
 
 
