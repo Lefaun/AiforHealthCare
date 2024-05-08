@@ -14,7 +14,7 @@ Nomes=[]
 Moradas=[]
 Numeros=[]
 Contactos=[]
-numero = random.randint(1, 1000)
+numeroPaciente = random.randint(1, 1000)
 def PesquisaB(numero):
 
     if numero in Pesquisa:
@@ -59,6 +59,7 @@ def menu():
         with col2:
             Idade = st.text_input("Idade")
         numeroPaciente = st.header(numero)
+        ###################################
         Numeros.append(numeroPaciente)
         Button = st.button("Adicionar Paciente", key='add')
         if Button == True:
