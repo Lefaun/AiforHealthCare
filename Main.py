@@ -75,9 +75,9 @@ def menu():
             df2 = pd.DataFrame(data={'Numero': [numero], 'Paciente': [Nomes], 'Morada': [Morada],})
             # Alteração de Teste na Criação do CSV
 
-            df.append(data)
-            df.to_csv("Lista_de_Pacientes2.csv", sep=";")
-            st.dataframe(df, width=700)
+            #df.append(data)
+            df2.to_csv("Lista_de_Pacientes2.csv", sep=";")
+            st.dataframe(df2, width=700)
 
         articles = pd.read_csv('Lista_de_Pacientes.csv' ,sep=",")
         st.dataframe(articles, width=700)
