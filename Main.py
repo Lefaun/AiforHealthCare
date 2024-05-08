@@ -26,7 +26,7 @@ def PesquisaB(numero):
 
 
 Pesquisa = st.sidebar.text_input("Pesquisa por numero de Processo")
-button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(numero))
+button = st.sidebar.button("Pesquise Por Nome de Paciente", on_click=PesquisaB, args=(numeroPaciente))
 
 menu = ["Menu", "Pesquisa" ,"Academia", "IMAGE - Classifier APP",]
 choice = st.selectbox("Selecione uma Opção", menu)
