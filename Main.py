@@ -103,7 +103,7 @@ def menu():
             ###################################
             #filtro2 = df[df['Numeros']]
             st.write("DataFrame com filto por numero de paciente: ")
-            filter2 = dados_de_Pacientes[dados_de_Pacientes[Numeros] == Pesquisa]
+            filter2 = dados_de_Pacientes[dados_de_Pacientes["Número"] == Pesquisa]
             st.table(filter2)
             st.dataframe(df, width=700)
            
