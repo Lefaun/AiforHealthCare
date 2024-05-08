@@ -72,7 +72,7 @@ def menu():
 
             df.to_csv("Lista_de_Pacientes2.csv", sep=",")
             st.success("Paciente Adicionado com Sucesso")
-            st.dataframe(dados_de_Pacientes, width=700)
+            st.table(dados_de_Pacientes, width=700)
 
         #else:
             #data = [{'Numero': [numero], 'Paciente': [Nomes], 'Morada': [Morada],}]
