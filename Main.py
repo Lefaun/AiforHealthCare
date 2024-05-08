@@ -88,7 +88,7 @@ def menu():
        # st.dataframe(articles, width=700)
 
     if choice == "Pesquisa":
-        Pesquisa = st.text_input("Pesquisa por numero de Paciente", key="submit")
+        Pesquisa = st.text_input("Pesquisa por numero de Paciente [entre parentisis]", key="submit")
         clicked = st.button("Pesquise Por Nome de Paciente", args=(numeroPaciente), key="Submit2")
         df = pd.read_csv('Lista_de_Pacientes2.csv', sep=",")
         #st.dataframe(articles, width=700)
@@ -105,7 +105,7 @@ def menu():
             st.write("DataFrame com filto por numero de paciente: ")
             filter2 = df[df["Número"] == Pesquisa]
             st.table(filter2)
-            st.dataframe(df, width=700)
+            #st.dataframe(df, width=700)
            
                     
 
