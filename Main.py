@@ -68,7 +68,7 @@ def menu():
             novo_Paciente = ({"Número": [numeroPaciente], "Nome": [Nome], "Morada": [Morada], "Contacto": [Contacto]})
             dados_de_Pacientes.append(novo_Paciente)
 
-            df = pd.DataFrame(dados_de_Pacientes, columns=["Numero", "Nome", "Morada"])
+            df = pd.DataFrame(dados_de_Pacientes, columns=["Número", "Nome", "Morada"])
 
             df.to_csv("Lista_de_Pacientes2.csv", sep=",")
             st.success("Paciente Adicionado com Sucesso")
