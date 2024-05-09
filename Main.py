@@ -127,7 +127,7 @@ def menu():
         Lista = [11, 16, 19, 18]
         num = 0
         st.header("Análises Clinicas")
-        Disciplina1 = st.multiselect(label=("Selecione O Resultado das Análises"), options=["Ferrantina", "Hemoglobina","Leucócitos","Creatinina","Proteina C-reativa", "bmi", "imc",  "pressao_arterial", "LDL_colesterol" , "HDL_colesterol2",  "log_proteina_total", "log_LDL/HDL",  "média_acucar_jejum"]))
+        Disciplina1 = st.multiselect(label=("Selecione O Resultado das Análises"), options=["Ferrantina", "Hemoglobina","Leucócitos","Creatinina","Proteina C-reativa", "bmi", "imc",  "pressao_arterial", "LDL_colesterol" , "HDL_colesterol2",  "log_proteina_total", "log_LDL/HDL",  "média_acucar_jejum"])
         st.write("Valores de referência")
 
         Notas = st.number_input("Introduza o valor registado", min_value=5)
