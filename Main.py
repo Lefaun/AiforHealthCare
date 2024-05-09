@@ -124,6 +124,7 @@ def menu():
 
     if choice == "Análises Clínicas":
         soma = 0
+        Data = {["Ferrantina" : 11, "Hemoglobina":16,"Leucócitos":18,"Creatinina":19,"Proteina C-reativa":11, "bmi":16, "imc":19,  "pressao_arterial":18, "LDL_colesterol":11 , "HDL_colesterol2":16,  "log_proteina_total":19, "log_LDL/HDL":18,  "média_acucar_jejum":11]}
         Lista = [11, 16, 19, 18, 11, 16, 19, 18,11, 16, 19, 18,11]
         num = 0
         st.header("Análises Clínicas")
@@ -146,13 +147,11 @@ def menu():
             st.write("Dentro dos Valores", soma)
         else:
             st.write(" Dentro dos Valores ", soma )
-        
-        
-        for i in Disciplina1:
-            chart_data = pd.DataFrame(Lista, columns= Disciplina1)
-    
-            st.bar_chart(chart_data)    
 
+        for i in Disciplina1:
+            chart_data = pd.DataFrame(Data, columns= [])
+    
+            st.bar_chart(chart_data)
         
 
     if choice == "IMAGE - Classifier APP":
