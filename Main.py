@@ -148,10 +148,10 @@ def menu():
             st.write(" Dentro dos Valores ", soma )
         
         
-        
-        chart_data = pd.DataFrame(Lista, columns= [Disciplina1])
-
-        st.bar_chart(chart_data)
+        for i in Disciplina1:
+            chart_data = pd.DataFrame(Lista, columns= [Disciplina1])
+    
+            st.bar_chart(chart_data)    
 
         
 
