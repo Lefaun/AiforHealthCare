@@ -143,11 +143,17 @@ def menu():
             st.write("Dentro dos Valores", soma)
         else:
             st.write(" Dentro dos Valores ", soma )
-        arr=(Lista)
+        
+        chart_data = pd.DataFrame(Disciplina1,Lista, columns=[options])
+
+        st.bar_chart(chart_data)
+        
         fig, ax = plt.subplots()
-        ax.hist(arr, bins=20)
+        ax.hist(Lista, bins=20)
         
         st.pyplot(fig)
+
+        
 
     if choice == "IMAGE - Classifier APP":
 
