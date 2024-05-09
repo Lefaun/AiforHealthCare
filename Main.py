@@ -149,7 +149,7 @@ def menu():
         
         
         for i in Disciplina1:
-            chart_data = pd.DataFrame(Lista, columns= [Disciplina1])
+            chart_data = pd.DataFrame(Lista, columns= Disciplina1])
     
             st.bar_chart(chart_data)    
 
