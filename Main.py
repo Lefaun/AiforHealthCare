@@ -144,7 +144,7 @@ def menu():
         else:
             st.write(" Dentro dos Valores ", soma )
         
-        chart_data = pd.DataFrame(Disciplina1,Lista, columns= Diciplina1)
+        chart_data = pd.DataFrame(Disciplina1,Lista, columns= ["Ferrantina", "Hemoglobina","Leucócitos","Creatinina","Proteina C-reativa", "bmi", "imc",  "pressao_arterial", "LDL_colesterol" , "HDL_colesterol2",  "log_proteina_total", "log_LDL/HDL",  "média_acucar_jejum"])
 
         st.bar_chart(chart_data)
         
