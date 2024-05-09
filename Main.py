@@ -138,6 +138,9 @@ def menu():
         for i in Disciplina1:
 
             st.write(f" {i} Dentro dos Valores de Referência ", valores)
+            chart_data = pd.DataFrame(Lista, columns= [i])
+
+            st.bar_chart(chart_data)
 
         if soma >= 15:
             st.write("Dentro dos Valores", soma)
@@ -145,9 +148,7 @@ def menu():
             st.write(" Dentro dos Valores ", soma )
         
         
-        chart_data = pd.DataFrame(Lista, columns= [Disciplina1])
-
-        st.bar_chart(chart_data)
+        
         
 
         
