@@ -148,10 +148,6 @@ def menu():
 
         st.bar_chart(chart_data)
         
-        fig, ax = plt.subplots()
-        ax.hist(Lista, bins=20)
-        
-        st.pyplot(fig)
 
         
 
