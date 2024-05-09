@@ -135,9 +135,9 @@ def menu():
         for valores in Lista:
             soma += valores/ len(Lista)
 
-        for valores in Lista:
+        for i in Disciplina1:
 
-            st.write(" Dentro dos Valores de Referência ", valores)
+            st.write(f" {Disciplina1} Dentro dos Valores de Referência ", valores)
 
         if soma >= 15:
             st.write("Dentro dos Valores", soma)
